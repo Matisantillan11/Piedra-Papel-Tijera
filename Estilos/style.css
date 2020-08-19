@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  background-image: url(/Imagenes/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.header h1 {
+  color: #ffff;
+  font-size: 50px;
+  font-weight: 100px;
+  margin-top: 8px;
+  text-align: center;
+}
+.puntaje {
+  margin: 10% auto 5%;
+  text-align: center;
+  color: white;
+  border: 3px solid white;
+  text-align: center;
+  width: 250px;
+  font-size: 60px;
+  padding: 30px 10px;
+  position: relative;
+}
+.usuarios {
+  display: inline-flex;
+  background: #e03d0c;
+  border-radius: 15px;
+  font-size: 30px;
+  padding: 10px 10px;
+}
+.contenedor {
+  display: inline-flex;
+  margin-left: 480px;
+}
+
+.boton {
+  background: #56556e4d;
+  outline: none;
+  padding: 10px 10px;
+  border: 2px solid #e03d0c;
+  border-radius: 40%;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.boton:hover {
+  background: #fff8dc4d;
+}
+
+@media only screen and (max-width: 600px) {
+  .body {
+    height: 800px;
+  }
+  .header h1 {
+    font-size: 30px;
+  }
+  .puntaje {
+    margin-bottom: 150px;
+  }
+  .contenedor {
+    margin-left: 5px;
+  }
+  .boton {
+    margin-left: 20px;
+    margin-bottom: 50px;
+  }
+
+  .boton img {
+    width: 60px;
+  }
+}

@@ -7,14 +7,20 @@ const contadorUser = document.getElementById("marcador-user")
 const contadorMachine = document.getElementById("marcador-machine")
 let scoreUser = 0;
 let scoreMachine = 0;
-var userName = prompt("Ingresá tu nombre: ")
-if (userName === null){
-    NombreUser.innerHTML = User;
-}else{
-    NombreUser.innerHTML=userName;
-}
+var userName = prompt("Ingresá tu nombre (Máximo 4 carácteres): ");
 
-var userChoice;
+
+
+
+
+//funciones
+const CargarNombre = ()=>{
+    if (userName === ""){
+        NombreUser.innerHTML = "User";
+    }else{
+        NombreUser.innerHTML=userName;
+    }
+};
 const preguntar = (user)=>{
     let options = ["piedra", "papel", "tijera"];
     let machineChoice = options[Math.floor(Math.random()*3)];
@@ -60,5 +66,11 @@ const jugar = ()=>{
     });
 };
 
-
+//ejecución
+if (userName.length > 4){
+    userName = prompt("Ingresá tu nombre (Máximo 4 carácteres): ");
+}else{
+    CargarNombre();
+}
+CargarNombre();
 jugar();
